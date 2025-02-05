@@ -18,8 +18,12 @@ export abstract class DomainModel<T> {
         return String(this.value);
     }
 
-    /** Check if two DomainModel objects are equal */
-    public equals(other: this): boolean {
-        return this.value === other.value;
+    /** Enhanced equality check */
+    public equals(other: unknown): boolean {
+        return (
+            Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && // ✅ Ensure same class type
+            (other as this).value === this.value // ✅ Ensures TypeScript recognizes 'value'
+        );
     }
 }
+
