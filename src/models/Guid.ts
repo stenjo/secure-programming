@@ -23,4 +23,13 @@ export abstract class Guid<T extends Guid<T>> extends DomainModel<string> {
     public static generate<T extends Guid<T>>(this: new (value: string) => T): T {
         return new this(crypto.randomUUID());
     }
+
+
+    /** Enhanced equality check */
+    public equals(other: unknown): boolean {
+        return (
+            other instanceof this.constructor && // Ensure they are the same subclass
+            other.value === this.value // Ensure they have the same GUID string
+        );
+    }
 }
