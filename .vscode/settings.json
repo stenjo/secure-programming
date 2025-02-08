@@ -1,4 +1,7 @@
 {
     "editor.defaultFormatter": "biomejs.biome",
-    "markiscodecoverage.enableDecorations": true
+    "markiscodecoverage.enableDecorations": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange"
+    
 }

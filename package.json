@@ -7,7 +7,7 @@
   "scripts": {
     "test": "vitest run",
     "start": "biome",
-    "format": "biome format"
+    "format": "biome format --write ."
   },
   "dependencies": {
     "node-fetch": "^3.3.2"
