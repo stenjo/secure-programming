@@ -1,13 +1,12 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "esModuleInterop": true,
-    "moduleResolution": "bundler",
-    "types": ["vitest/globals"]
-  },
-  "include": ["src/**/*"]
+	"compilerOptions": {
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"target": "ES2022",
+		"esModuleInterop": true,
+		"strict": true,
+		"outDir": "./dist",
+		"sourceMap": true
+	},
+	"include": ["src/**/*.ts"]
 }

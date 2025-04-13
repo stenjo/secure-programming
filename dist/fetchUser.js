@@ -1,7 +1,9 @@
-import { getRandomUsers } from './api/getRandomUsers';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const getRandomUsers_1 = require("./api/getRandomUsers");
 async function fetchSingleRecord() {
     try {
-        const users = await getRandomUsers(1);
+        const users = await (0, getRandomUsers_1.getRandomUsers)(1);
         console.log("Fetched User:", users[0]);
     }
     catch (error) {
@@ -10,3 +12,4 @@ async function fetchSingleRecord() {
 }
 // Call the function
 fetchSingleRecord();
+//# sourceMappingURL=fetchUser.js.map

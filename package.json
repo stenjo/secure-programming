@@ -1,24 +1,31 @@
 {
-  "name": "secure-programmin",
-  "packageManager": "yarn@4.5.2",
-  "type": "module",
-  "version": "1.0.0",
-  "description": "Secure Programming",
-  "scripts": {
-    "test": "vitest run",
-    "start": "biome",
-    "format": "biome format --write ."
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  },
-  "devDependencies": {
-    "@types/node": "^22.13.1",
-    "@vitest/coverage-v8": "3.0.4",
-    "biome": "^0.3.3",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.4"
-  }
+	"name": "secure-programmin",
+	"packageManager": "yarn@4.5.2",
+	"type": "commonjs",
+	"version": "1.0.0",
+	"description": "Secure Programming",
+	"scripts": {
+		"test": "vitest run",
+		"migrate": "prisma migrate dev",
+		"generate": "prisma generate",
+		"build": "npm run migrate && npm run generate && tsc --project tsconfig.json",
+		"start": "ts-node src/index.ts",
+		"format": "biome format --write ."
+	},
+	"dependencies": {
+		"@prisma/client": "^6.6.0",
+		"axios": "^1.7.9",
+		"node-fetch": "^3.3.2",
+		"prisma": "^6.6.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@tsconfig/node-lts": "^22.0.1",
+		"@types/node": "^22.14.1",
+		"@vitest/coverage-v8": "3.1.1",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "^5.8.3",
+		"vitest": "3.1.1"
+	}
 }

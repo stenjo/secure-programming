@@ -1,19 +1,25 @@
-import { NameString } from "./nameString";
-export class Name {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Name = void 0;
+const nameString_1 = require("./nameString");
+class Name {
     first;
     last;
-    constructor(first, last) {
+    title;
+    constructor(title, first, last) {
         if (first.trim() === "") {
             throw new Error("First name cannot be empty.");
         }
         if (last.trim() === "") {
             throw new Error("Last name cannot be empty.");
         }
-        this.first = new NameString(first);
-        this.last = new NameString(last);
+        this.title = title;
+        this.first = new nameString_1.NameString(first);
+        this.last = new nameString_1.NameString(last);
     }
-    ;
     toString = () => {
-        return `${this.first} ${this.last}`;
+        return `${this.title} ${this.first} ${this.last}`;
     };
 }
+exports.Name = Name;
+//# sourceMappingURL=name.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"ProjectGuid.js","sourceRoot":"","sources":["../../src/models/ProjectGuid.ts"],"names":[],"mappings":";;;AAAA,iCAA8B;AAE9B,MAAa,WAAY,SAAQ,WAAiB;IACjD,YAAY,KAAa;QACxB,KAAK,CAAC,KAAK,CAAC,CAAC;IACd,CAAC;IAED,kDAAkD;IAC3C,MAAM,CAAC,MAAM,CAAC,KAAa;QACjC,OAAO,IAAI,WAAW,CAAC,KAAK,CAAC,CAAC;IAC/B,CAAC;CACD;AATD,kCASC"}

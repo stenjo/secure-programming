@@ -1,9 +1,12 @@
-export class Guid {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Guid = void 0;
+class Guid {
     value;
     static guidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     constructor(value) {
         if (!Guid.isValidGuid(value)) {
-            throw new Error('Invalid GUID format');
+            throw new Error("Invalid GUID format");
         }
         this.value = value;
     }
@@ -14,3 +17,5 @@ export class Guid {
         return this.value;
     }
 }
+exports.Guid = Guid;
+//# sourceMappingURL=guid.js.map

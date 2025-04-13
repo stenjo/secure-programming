@@ -1,3 +1,4 @@
+"use strict";
 // {
 //   "results": [
 //     {
@@ -18,14 +19,18 @@
 //     "version": "1.3"
 //   }
 // }
-import { Name } from "./name";
-import { Guid } from "./guid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiResponse = exports.Info = exports.User = exports.Name = exports.Login = void 0;
+const name_1 = require("./name");
+Object.defineProperty(exports, "Name", { enumerable: true, get: function () { return name_1.Name; } });
+const guid_1 = require("./guid");
 class Login {
     uuid;
     constructor(uuid) {
-        this.uuid = new Guid(uuid);
+        this.uuid = new guid_1.Guid(uuid);
     }
 }
+exports.Login = Login;
 class User {
     login;
     name;
@@ -36,6 +41,7 @@ class User {
         this.email = email;
     }
 }
+exports.User = User;
 class Info {
     seed;
     results;
@@ -48,6 +54,7 @@ class Info {
         this.version = version;
     }
 }
+exports.Info = Info;
 class ApiResponse {
     results;
     info;
@@ -56,11 +63,5 @@ class ApiResponse {
         this.info = info;
     }
 }
-// Example usage
-// const exampleLogin = new Login("c9b1e9b2-3f5d-4b1e-8b1e-9b2c9b1e9b2c");
-// const exampleName = new Name("John", "Doe");
-// const exampleUser = new User(exampleLogin, exampleName, "john.doe@example.com");
-// const exampleInfo = new Info("abc", 1, 1, "1.3");
-// const exampleApiResponse = new ApiResponse([exampleUser], exampleInfo);
-// console.log(exampleApiResponse);
-export { Login, Name, User, Info, ApiResponse };
+exports.ApiResponse = ApiResponse;
+//# sourceMappingURL=apiResponse.js.map

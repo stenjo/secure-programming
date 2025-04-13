@@ -22,49 +22,48 @@
 import { Name } from "./name";
 import { Guid } from "./guid";
 
-
 class Login {
-  uuid: Guid;
+	uuid: Guid;
 
-  constructor(uuid: string) {
-    this.uuid = new Guid(uuid);
-  }
+	constructor(uuid: string) {
+		this.uuid = new Guid(uuid);
+	}
 }
 
 class User {
-  login: Login;
-  name: Name;
-  email: string;
+	login: Login;
+	name: Name;
+	email: string;
 
-  constructor(login: Login, name: Name, email: string) {
-    this.login = login;
-    this.name = name;
-    this.email = email;
-  }
+	constructor(login: Login, name: Name, email: string) {
+		this.login = login;
+		this.name = name;
+		this.email = email;
+	}
 }
 
 class Info {
-  seed: string;
-  results: number;
-  page: number;
-  version: string;
+	seed: string;
+	results: number;
+	page: number;
+	version: string;
 
-  constructor(seed: string, results: number, page: number, version: string) {
-    this.seed = seed;
-    this.results = results;
-    this.page = page;
-    this.version = version;
-  }
+	constructor(seed: string, results: number, page: number, version: string) {
+		this.seed = seed;
+		this.results = results;
+		this.page = page;
+		this.version = version;
+	}
 }
 
 class ApiResponse {
-  results: User[];
-  info: Info;
+	results: User[];
+	info: Info;
 
-  constructor(results: User[], info: Info) {
-    this.results = results;
-    this.info = info;
-  }
+	constructor(results: User[], info: Info) {
+		this.results = results;
+		this.info = info;
+	}
 }
 
 // Example usage
